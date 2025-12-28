@@ -1,0 +1,84 @@
+#手术器械信息
+instrument:
+    id: 4
+    name: "手术器具3"
+    name_en: "Surgical Instrument 3"
+    description: "这是第三个手术器械"
+    distance_matrix:
+        - [71.5,52]
+        - [57.5,63]
+        - [88.5,82.6]
+
+points:
+  - id: P1
+    encoding: [0,0,0]             
+    edges:
+      - to: P2
+        encoding: 0
+        missing edge: d1             
+        ref_vector: null           
+        
+      - to: P3
+        encoding: 2
+        missing edge: d5
+        ref_vector: null
+        
+      - to: P4
+        encoding: 1
+        missing edge: d3
+        ref_vector: null
+
+  - id: P2
+    encoding: [0,1,1]
+    edges:
+      - to: P1
+        encoding: 0
+        missing edge: d1
+        ref_vector: null
+        
+      - to: P3
+        encoding: 1
+        missing edge: d4
+        ref_vector: null
+        
+      - to: P4
+        encoding: 2
+        missing edge: d6
+        ref_vector: null
+
+  - id: P3
+    encoding: [1,1,0]
+    edges:
+      - to: P1
+        encoding: 2
+        missing edge: d1
+        ref_vector: null
+        
+      - to: P2
+        encoding: 1
+        missing edge: d4
+        ref_vector: null
+        
+      - to: P4
+        encoding: 0
+        missing edge: d2
+        ref_vector: null
+
+
+  - id: P4
+    encoding: [1,0,1]
+    edges:
+      - to: P1
+        encoding: 2
+        missing edge: d5
+        ref_vector: null
+        
+      - to: P2
+        encoding: 0
+        missing edge: d2
+        ref_vector: null
+        
+      - to: P3
+        encoding: 1
+        missing edge: d3
+        ref_vector: null

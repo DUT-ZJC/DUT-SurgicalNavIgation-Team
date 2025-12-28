@@ -1,0 +1,125 @@
+#手术器械信息
+instrument:
+    id: 1
+    name: "手术器具1"
+    name_en: "Surgical Instrument 1"
+    description: "这是第一个手术器械"
+
+    # -------------------------------------------
+    # 边及点的编码定义
+    # -------------------------------------------
+    #
+    #                d1 (上)
+    #     P1 o--------------------o P2  
+    #        |\                  /|          
+    #        | \                / |
+    #        |  \           d6 /  |
+    #        |   \            /   | 
+    #        |    \          /    |
+    #        |     \        /     |
+    #        |      \      /      |
+    #        |       \    /       |
+    #     d3 |        \  /        | d4
+    #        |         \/         | <-- 交叉点
+    #        |         /\         |
+    #        |        /  \        |
+    #        |       /    \       |
+    #        |      /      \      |
+    #        |     /        \     |
+    #        |    /       d5 \    |
+    #        |   /            \   |
+    #        |  /              \  |
+    #        | /                \ |
+    #     P4 o--------------------o P3
+    #               d2 (下)
+    #
+    # -------------------------------------------
+    # --------------------------------------------------------------------------
+    # distance_matrix: 二维距离矩阵，表示三个对边。 d1 d3 d5 相交于P1
+    # distance_matrix:
+    #   - [60,55]
+    #   - [65,50]
+    #   - [73,88]
+    # --------------------------------------------------------------------------
+    distance_matrix:
+        - [60,55]
+        - [65,50]
+        - [73,88]
+
+points:
+  # --------------------------------------------------------------------------
+  # ref_vector: 代表以该点为原点，以另外两条边建系下(缺失这条边时)，手术尖点到原点的坐标。
+  # --------------------------------------------------------------------------
+  - id: P1
+    encoding: [0,0,0]             #邻接 d1、d3、d5
+    edges:
+      - to: P2
+        encoding: 0
+        missing edge: d1              # 单位: mm
+        ref_vector: null           # 待程序计算填入
+        
+      - to: P3
+        encoding: 2
+        missing edge: d5
+        ref_vector: null
+        
+      - to: P4
+        encoding: 1
+        missing edge: d3
+        ref_vector: null
+
+  - id: P2
+    encoding: [0,1,1]
+    edges:
+      - to: P1
+        encoding: 0
+        missing edge: d1
+        ref_vector: null
+        
+      - to: P3
+        encoding: 1
+        missing edge: d4
+        ref_vector: null
+        
+      - to: P4
+        encoding: 2
+        missing edge: d6
+        ref_vector: null
+
+  - id: P3
+    encoding: [1,1,0]
+    edges:
+      - to: P1
+        encoding: 2
+        missing edge: d1
+        ref_vector: null
+        
+      - to: P2
+        encoding: 1
+        missing edge: d4
+        ref_vector: null
+        
+      - to: P4
+        encoding: 0
+        missing edge: d2
+        ref_vector: null
+
+
+  - id: P4
+    encoding: [1,0,1]
+    edges:
+      - to: P1
+        encoding: 2
+        missing edge: d5
+        ref_vector: null
+        
+      - to: P2
+        encoding: 0
+        missing edge: d2
+        ref_vector: null
+        
+      - to: P3
+        encoding: 1
+        missing edge: d3
+        ref_vector: null
+    
