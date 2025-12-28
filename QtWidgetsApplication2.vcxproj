@@ -138,18 +138,10 @@
     <ClInclude Include="..\Algorithm Test\Match_Points.hpp" />
     <ClInclude Include="..\Algorithm Test\StereoDepthEstimator.hpp" />
     <ClInclude Include="..\Algorithm Test\VisualQueue.hpp" />
-    <ClInclude Include="CameraParams.h" />
     <QtMoc Include="Manager.h" />
     <QtMoc Include="Image_Tranlsate.h" />
     <QtMoc Include="GL_Image.hpp" />
     <ClInclude Include="LogPrint.h" />
-    <ClInclude Include="MvCameraControl.h" />
-    <ClInclude Include="MvErrorDefine.h" />
-    <ClInclude Include="MvISPErrorDefine.h" />
-    <ClInclude Include="MvObsoleteInterfaces.h" />
-    <ClInclude Include="MvSdkExport.h" />
-    <ClInclude Include="ObsoleteCamParams.h" />
-    <ClInclude Include="PixelType.h" />
     <ClInclude Include="Twin_Cam.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

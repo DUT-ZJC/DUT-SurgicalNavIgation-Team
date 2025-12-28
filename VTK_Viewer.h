@@ -2,7 +2,6 @@
 #define VTK_VIEWER_H
 
 #include "Twin_Cam.h"
-#include "Image_Processing.h"
 #include "Manager.h"
 #include "Image_Tranlsate.h"
 #include "GL_Image.hpp"
@@ -96,7 +95,7 @@ public:
 
 public slots:
     // 主线程中实际执行VTK更新的槽函数
-    void updateVtkWindow(const Point3f& Position , float roll, float pitch, float yaw);
+    void updateVtkWindow(const cv::Point3f& Position , float roll, float pitch, float yaw);
     //void onImageReceived(const QImage& leftImg, const QImage& rightImg); // 更新单通道图像
 private:
     // 模型信息结构体

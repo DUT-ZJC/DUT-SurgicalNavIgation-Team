@@ -28,7 +28,7 @@ int main(int argc, char* argv[])
         printf("start grap");
         //w.showImage(true);
     }
-    catch (const runtime_error& e) {
+    catch (const std::runtime_error& e) {
         qDebug() << "Error:" << e.what();
         printf(e.what());
     }
