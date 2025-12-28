@@ -1,0 +1,157 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>qrc;rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Form Files">
+      <UniqueIdentifier>{99349809-55BA-4b9d-BF79-8FDBB0286EB3}</UniqueIdentifier>
+      <Extensions>ui</Extensions>
+    </Filter>
+    <Filter Include="Cam_SDK">
+      <UniqueIdentifier>{500a44be-8c2d-434a-b8ba-6d21b2561aae}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="VTK_Viewer">
+      <UniqueIdentifier>{e67eaad9-728a-470e-8cfc-84d53651a2d0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="IncludeOffical">
+      <UniqueIdentifier>{ae63be72-80db-43b0-874a-af861277baa1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="ManagerTask">
+      <UniqueIdentifier>{60694e22-713c-4ff7-84d0-b386ba385291}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MatchAlgorithm">
+      <UniqueIdentifier>{42f9b177-b1db-40c9-976d-fea25e677358}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <QtRcc Include="QtWidgetsApplication2.qrc">
+      <Filter>Resource Files</Filter>
+    </QtRcc>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="VTK_Viewer.cpp">
+      <Filter>VTK_Viewer</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="Twin_Cam.cpp">
+      <Filter>Cam_SDK</Filter>
+    </ClCompile>
+    <ClCompile Include="Manager.cpp">
+      <Filter>ManagerTask</Filter>
+    </ClCompile>
+    <ClCompile Include="LogPrint.cpp">
+      <Filter>ManagerTask</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Algorithm Test\Calculate_3D_Positions.cpp">
+      <Filter>MatchAlgorithm</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Algorithm Test\Cam_Paras.cpp">
+      <Filter>MatchAlgorithm</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Algorithm Test\CV_Manager.cpp">
+      <Filter>MatchAlgorithm</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Algorithm Test\Load_Image.cpp">
+      <Filter>MatchAlgorithm</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Algorithm Test\Match_Instruments.cpp">
+      <Filter>MatchAlgorithm</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Algorithm Test\Match_Points.cpp">
+      <Filter>MatchAlgorithm</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Algorithm Test\StereoDepthEstimator.cpp">
+      <Filter>MatchAlgorithm</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="readme.md" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="CameraParams.h">
+      <Filter>IncludeOffical</Filter>
+    </ClInclude>
+    <ClInclude Include="MvCameraControl.h">
+      <Filter>IncludeOffical</Filter>
+    </ClInclude>
+    <ClInclude Include="MvErrorDefine.h">
+      <Filter>IncludeOffical</Filter>
+    </ClInclude>
+    <ClInclude Include="MvISPErrorDefine.h">
+      <Filter>IncludeOffical</Filter>
+    </ClInclude>
+    <ClInclude Include="MvObsoleteInterfaces.h">
+      <Filter>IncludeOffical</Filter>
+    </ClInclude>
+    <ClInclude Include="MvSdkExport.h">
+      <Filter>IncludeOffical</Filter>
+    </ClInclude>
+    <ClInclude Include="ObsoleteCamParams.h">
+      <Filter>IncludeOffical</Filter>
+    </ClInclude>
+    <ClInclude Include="PixelType.h">
+      <Filter>IncludeOffical</Filter>
+    </ClInclude>
+    <ClInclude Include="Twin_Cam.h">
+      <Filter>Cam_SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="LogPrint.h">
+      <Filter>ManagerTask</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Algorithm Test\Calculate_3D_Positions.hpp">
+      <Filter>MatchAlgorithm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Algorithm Test\Cam_Paras.hpp">
+      <Filter>MatchAlgorithm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Algorithm Test\CMVMutex.hpp">
+      <Filter>MatchAlgorithm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Algorithm Test\CV_Manager.hpp">
+      <Filter>MatchAlgorithm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Algorithm Test\Load_Image.hpp">
+      <Filter>MatchAlgorithm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Algorithm Test\Logger.hpp">
+      <Filter>MatchAlgorithm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Algorithm Test\Match_Instruments.hpp">
+      <Filter>MatchAlgorithm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Algorithm Test\Match_Points.hpp">
+      <Filter>MatchAlgorithm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Algorithm Test\StereoDepthEstimator.hpp">
+      <Filter>MatchAlgorithm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Algorithm Test\VisualQueue.hpp">
+      <Filter>MatchAlgorithm</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="Manager.h">
+      <Filter>ManagerTask</Filter>
+    </QtMoc>
+    <QtMoc Include="VTK_Viewer.h">
+      <Filter>VTK_Viewer</Filter>
+    </QtMoc>
+    <QtMoc Include="Image_Tranlsate.h">
+      <Filter>VTK_Viewer</Filter>
+    </QtMoc>
+    <QtMoc Include="GL_Image.hpp">
+      <Filter>VTK_Viewer</Filter>
+    </QtMoc>
+  </ItemGroup>
+  <ItemGroup>
+    <QtUic Include="QtWidgetsApplication2.ui">
+      <Filter>VTK_Viewer</Filter>
+    </QtUic>
+  </ItemGroup>
+</Project>

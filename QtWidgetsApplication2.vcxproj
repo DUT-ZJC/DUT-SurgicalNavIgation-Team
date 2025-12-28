@@ -1,0 +1,161 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{9D3D0CC1-A9AC-4768-8FFE-5A1BACF671FF}</ProjectGuid>
+    <Keyword>QtVS_v304</Keyword>
+    <WindowsTargetPlatformVersion Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">10.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">10.0</WindowsTargetPlatformVersion>
+    <QtMsBuild Condition="'$(QtMsBuild)'=='' OR !Exists('$(QtMsBuild)\qt.targets')">$(MSBuildProjectDirectory)\QtMsBuild</QtMsBuild>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v143</PlatformToolset>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v143</PlatformToolset>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Condition="Exists('$(QtMsBuild)\qt_defaults.props')">
+    <Import Project="$(QtMsBuild)\qt_defaults.props" />
+  </ImportGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'" Label="QtSettings">
+    <QtInstall>6.9.2_msvc2022_64</QtInstall>
+    <QtModules>core;gui;widgets</QtModules>
+    <QtBuildConfig>debug</QtBuildConfig>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'" Label="QtSettings">
+    <QtInstall>6.9.2_msvc2022_64</QtInstall>
+    <QtModules>core;gui;widgets</QtModules>
+    <QtBuildConfig>release</QtBuildConfig>
+  </PropertyGroup>
+  <Target Name="QtMsBuildNotFound" BeforeTargets="CustomBuild;ClCompile" Condition="!Exists('$(QtMsBuild)\qt.targets') or !Exists('$(QtMsBuild)\qt.props')">
+    <Message Importance="High" Text="QtMsBuild: could not locate qt.targets, qt.props; project may not build correctly." />
+  </Target>
+  <ImportGroup Label="ExtensionSettings" />
+  <ImportGroup Label="Shared" />
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(QtMsBuild)\Qt.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(QtMsBuild)\Qt.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <IncludePath>C:\Users\Administrator\source\repos\QtWidgetsApplication2\Algorithm Test;C:\Users\Administrator\source\repos\QtWidgetsApplication2\Algorithm Test\include;C:\Users\Administrator\source\repos\QtWidgetsApplication2\Algorithm Test\include\spdlog;D:\ProgramEnvironment\MVS\Development\Includes;D:\ProgramEnvironment\OpenCV\opencv\build\include\opencv2;D:\ProgramEnvironment\OpenCV\opencv\build\include;D:\ProgramEnvironment\3rdparty-vc14-64\openvr-1.14.15-64\headers;D:\ProgramEnvironment\3rdparty-vc14-64\tbb-2021.13.0-x64\include\tbb;D:\ProgramEnvironment\3rdparty-vc14-64\tbb-2021.13.0-x64\include;D:\ProgramEnvironment\VTK-9.5.1\IO\OCCT;D:\ProgramEnvironment\occt_vc14-64-with-debug\inc\inspector;D:\ProgramEnvironment\occt_vc14-64-with-debug\inc;D:\QT\6.9.2\msvc2022_64\include\QtOpenGL;D:\QT\6.9.2\msvc2022_64\include\QtOpenGL\6.9.2;D:\QT\6.9.2\msvc2022_64\include\QtOpenGLWidgets;D:\QT\6.9.2\msvc2022_64\include;D:\ProgramEnvironment\VTK-9.5.1\GUISupport;D:\ProgramEnvironment\VTK-9.5.1\GUISupport\Qt;D:\ProgramEnvironment\VTK-9.5.1\out\install\x64-Debug\include\vtk-9.5;D:\ProgramEnvironment\VTK-9.5.1\out\install\x64-Debug\include;$(IncludePath)</IncludePath>
+    <LibraryPath>D:\ProgramEnvironment\MVS\Development\Libraries\win64;D:\ProgramEnvironment\OpenCV\opencv\build\x64\vc16\lib;D:\ProgramEnvironment\3rdparty-vc14-64\openvr-1.14.15-64\lib\win64;D:\ProgramEnvironment\3rdparty-vc14-64\openvr-1.14.15-64\lib;D:\ProgramEnvironment\3rdparty-vc14-64\tbb-2021.13.0-x64\lib;D:\ProgramEnvironment\occt_vc14-64-with-debug\win64\vc14\lib;D:\QT\6.9.2\msvc2022_64\lib;D:\ProgramEnvironment\VTK-9.5.1\out\install\x64-Debug\lib;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Link>
+      <AdditionalDependencies>opencv_world4110d.lib;MvCameraControl.lib;vtkRenderingAnnotation-9.5d.lib;openvr_api.lib;tbb12.lib;vtkIOOCCT-9.5d.lib;vtkIOImport-9.5d.lib;vtkIOGeometry-9.5d.lib;vtkFiltersCore-9.5d.lib;Qt6OpenGLWidgetsd.lib;Qt6OpenGLd.lib;vtkCommonDataModel-9.5d.lib;vtkCommonExecutionModel-9.5d.lib;vtkCommonCore-9.5d.lib;vtksys-9.5d.lib;vtkCommonMath-9.5d.lib;vtkCommonMisc-9.5d.lib;vtkCommonSystem-9.5d.lib;vtkCommonTransforms-9.5d.lib;vtkFiltersGeneral-9.5d.lib;vtkFiltersGeometry-9.5d.lib;vtkFiltersSources-9.5d.lib;vtkIOCore-9.5d.lib;vtkIOLegacy-9.5d.lib;vtkIOPLY-9.5d.lib;vtkIOXML-9.5d.lib;vtkInteractionStyle-9.5d.lib;vtkRenderingCore-9.5d.lib;vtkRenderingOpenGL2-9.5d.lib;vtkRenderingUI-9.5d.lib;vtkGUISupportQt-9.5d.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <ClCompile>
+      <OpenMPSupport>true</OpenMPSupport>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'" Label="Configuration">
+    <ClCompile>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'" Label="Configuration">
+    <ClCompile>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\Algorithm Test\Calculate_3D_Positions.cpp" />
+    <ClCompile Include="..\Algorithm Test\Cam_Paras.cpp" />
+    <ClCompile Include="..\Algorithm Test\CV_Manager.cpp" />
+    <ClCompile Include="..\Algorithm Test\Load_Image.cpp" />
+    <ClCompile Include="..\Algorithm Test\Match_Instruments.cpp" />
+    <ClCompile Include="..\Algorithm Test\Match_Points.cpp" />
+    <ClCompile Include="..\Algorithm Test\StereoDepthEstimator.cpp" />
+    <ClCompile Include="LogPrint.cpp" />
+    <ClCompile Include="Twin_Cam.cpp" />
+    <QtRcc Include="QtWidgetsApplication2.qrc" />
+    <QtUic Include="QtWidgetsApplication2.ui" />
+    <QtMoc Include="VTK_Viewer.h" />
+    <ClCompile Include="Manager.cpp" />
+    <ClCompile Include="VTK_Viewer.cpp">
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">input</DynamicSource>
+      <QtMocFileName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(Filename).moc</QtMocFileName>
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Release|x64'">input</DynamicSource>
+      <QtMocFileName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">%(Filename).moc</QtMocFileName>
+    </ClCompile>
+    <ClCompile Include="main.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="readme.md" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\Algorithm Test\Calculate_3D_Positions.hpp" />
+    <ClInclude Include="..\Algorithm Test\Cam_Paras.hpp" />
+    <ClInclude Include="..\Algorithm Test\CMVMutex.hpp" />
+    <ClInclude Include="..\Algorithm Test\CV_Manager.hpp" />
+    <ClInclude Include="..\Algorithm Test\Load_Image.hpp" />
+    <ClInclude Include="..\Algorithm Test\Logger.hpp" />
+    <ClInclude Include="..\Algorithm Test\Match_Instruments.hpp" />
+    <ClInclude Include="..\Algorithm Test\Match_Points.hpp" />
+    <ClInclude Include="..\Algorithm Test\StereoDepthEstimator.hpp" />
+    <ClInclude Include="..\Algorithm Test\VisualQueue.hpp" />
+    <ClInclude Include="CameraParams.h" />
+    <QtMoc Include="Manager.h" />
+    <QtMoc Include="Image_Tranlsate.h" />
+    <QtMoc Include="GL_Image.hpp" />
+    <ClInclude Include="LogPrint.h" />
+    <ClInclude Include="MvCameraControl.h" />
+    <ClInclude Include="MvErrorDefine.h" />
+    <ClInclude Include="MvISPErrorDefine.h" />
+    <ClInclude Include="MvObsoleteInterfaces.h" />
+    <ClInclude Include="MvSdkExport.h" />
+    <ClInclude Include="ObsoleteCamParams.h" />
+    <ClInclude Include="PixelType.h" />
+    <ClInclude Include="Twin_Cam.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Condition="Exists('$(QtMsBuild)\qt.targets')">
+    <Import Project="$(QtMsBuild)\qt.targets" />
+  </ImportGroup>
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
